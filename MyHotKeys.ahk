@@ -38,6 +38,10 @@ Capslock::
     +
 return
 
+; Windows Key launches search (WOX)
+LWin::
+    !Space
+return
 
 ; WINDOWS KEY + H TOGGLES HIDDEN FILES 
 #IfWinActive ahk_class ExploreWClass
