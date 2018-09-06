@@ -26,19 +26,22 @@ F4::
     Send #{Tab} ;show taskview
 return
 
-;TaskView
-MButton::
+; ;TaskView
+;https://autohotkey.com/docs/KeyList.htm
+;MButton::
+XButton1::
     Send #{Tab} ;show taskview
 return 
 
+
 ;disbale LockKeys
-; Set Lock keys permanently
+;Set Lock keys permanently
 SetNumlockState, AlwaysOn
 SetCapsLockState, AlwaysOff
 SetScrollLockState, AlwaysOff
 return
 
-; Turn Caps Lock into a Shift key
+;Turn Caps Lock into a Shift key
 Capslock::
     +
 return
