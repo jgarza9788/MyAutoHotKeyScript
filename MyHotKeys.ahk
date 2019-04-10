@@ -13,6 +13,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; & - An ampersand may be used between any two keys or mouse buttons to combine them into a custom hotkey.
 
 
+
 ; ***Windows/App Controls***
 
 ; Quit an Program
@@ -22,16 +23,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 return
 
 ;TaskView
-F4::
-    Send #{Tab} ;show taskview
-return
+; F4::
+;     Send #{Tab} ;show taskview
+; return
 
 ; ;TaskView
-;https://autohotkey.com/docs/KeyList.htm
-;MButton::
-XButton1::
-    Send #{Tab} ;show taskview
-return 
+; MButton::
+;     Send #{Tab} ;show taskview
+; return
 
 
 ;disbale LockKeys
