@@ -22,6 +22,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ;ExitApp
 return
 
+
 ;TaskView
 ; F4::
 ;     Send #{Tab} ;show taskview
