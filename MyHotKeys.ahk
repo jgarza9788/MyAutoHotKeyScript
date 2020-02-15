@@ -73,6 +73,9 @@ return
 return
 #IfWinActive
 
+; Pin Window to Top
+^SPACE:: Winset, AlwaysOnTop, , A
+
 ; **************************
 
 
