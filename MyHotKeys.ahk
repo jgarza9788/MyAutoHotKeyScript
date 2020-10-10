@@ -13,6 +13,12 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; & - An ampersand may be used between any two keys or mouse buttons to combine them into a custom hotkey.
 
 
+#+F21::
+    Send !{Space}
+return
+F9::
+    Send !{Space}
+return
 
 ; ***Windows/App Controls***
 
