@@ -1,4 +1,5 @@
 ﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+#SingleInstance force 
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
@@ -12,12 +13,32 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; + - Shift
 ; & - An ampersand may be used between any two keys or mouse buttons to combine them into a custom hotkey.
 
+;https://www.autohotkey.com/docs/commands/_InstallKeybdHook.htm
+; #InstallKeybdHook
+; #UseHook
 
 #+F21::
     Send !{Space}
 return
 F9::
     Send !{Space}
+return
+#s::
+    Send !{Space}
+return
+
+Run this script then use WINDOWS KEY + Y to toggle the taskbar
+#y::
+if toggle := !toggle
+{
+    WinHide ahk_class Shell_TrayWnd
+    WinHide Start ahk_class Button
+}
+else
+{
+    WinShow ahk_class Shell_TrayWnd
+    WinShow Start ahk_class Button
+}
 return
 
 ; ***Windows/App Controls***
@@ -26,6 +47,11 @@ return
 #Q::
     Send !{F4}
     ;ExitApp
+return
+
+; print screen ;windows shift s
+PrintScreen::
+    send #+s
 return
 
 
@@ -55,9 +81,9 @@ return
 
 ; WINDOWS KEY + H TOGGLES HIDDEN FILES 
 #IfWinActive ahk_class ExploreWClass
-#h::
+F8::
 #IfWinActive ahk_class CabinetWClass
-#h:: 
+F8:: 
     Send !{V}{H}{H}
 return
 #IfWinActive
@@ -65,9 +91,9 @@ return
 
 ; WINDOWS KEY + N TOGGLES Navigation
 #IfWinActive ahk_class ExploreWClass
-#n::
+F7::
 #IfWinActive ahk_class CabinetWClass
-#n:: 
+F7:: 
     Send !{V}{N}{Enter}
 return
 #IfWinActive
