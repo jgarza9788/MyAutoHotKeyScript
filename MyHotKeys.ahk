@@ -81,9 +81,9 @@ return
 
 ; WINDOWS KEY + H TOGGLES HIDDEN FILES 
 #IfWinActive ahk_class ExploreWClass
-F8::
+#h::
 #IfWinActive ahk_class CabinetWClass
-F8:: 
+#h:: 
     Send !{V}{H}{H}
 return
 #IfWinActive
@@ -91,9 +91,9 @@ return
 
 ; WINDOWS KEY + N TOGGLES Navigation
 #IfWinActive ahk_class ExploreWClass
-F7::
+#n::
 #IfWinActive ahk_class CabinetWClass
-F7:: 
+#n:: 
     Send !{V}{N}{Enter}
 return
 #IfWinActive
@@ -105,8 +105,9 @@ return
 return
 #IfWinActive
 
-; Pin Window to Top
-^SPACE:: Winset, AlwaysOnTop, , A
+; no longer needed
+; ; Pin Window to Top
+; ^SPACE:: Winset, AlwaysOnTop, , A
 
 ; **************************
 
