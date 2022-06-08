@@ -111,6 +111,16 @@ return
 
 ; **************************
 
+; ******personal info******
+
+;@@ => my gmail    
+:*:@@::  
+    send jgarza9788@gmail.com
+
+;## => my number
+:*:##::  
+    send 8182510647
+
 
 ; ******Media Controls******
 
