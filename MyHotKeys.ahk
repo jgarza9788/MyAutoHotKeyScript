@@ -116,10 +116,12 @@ return
 ;@@ => my gmail    
 :*:@@::  
     send jgarza9788@gmail.com
+    return
 
 ;## => my number
 :*:##::  
     send 8182510647
+    return
 
 
 ; ******Media Controls******
