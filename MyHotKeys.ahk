@@ -119,7 +119,7 @@ return
     return
 
 ;## => my number
-:*:##::  
+:*:@#::  
     send 8182510647
     return
 
