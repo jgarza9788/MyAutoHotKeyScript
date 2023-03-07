@@ -17,15 +17,16 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; #InstallKeybdHook
 ; #UseHook
 
-#+F21::
-    Send !{Space}
-return
-F9::
-    Send !{Space}
-return
-#s::
-    Send !{Space}
-return
+;;these are no longer needed
+;#+F21::
+;    Send !{Space}
+;return
+;F9::
+;    Send !{Space}
+;return
+;#s::
+;    Send !{Space}
+;return
 
 Run this script then use WINDOWS KEY + Y to toggle the taskbar
 #y::
@@ -78,25 +79,25 @@ Capslock::
     +
 return
 
+;;; --> OneCommander uses Ctrl+H
+;; WINDOWS KEY + H TOGGLES HIDDEN FILES 
+;#IfWinActive ahk_class ExploreWClass
+;#h::
+;#IfWinActive ahk_class CabinetWClass
+;#h:: 
+;    Send !{V}{H}{H}
+;return
+;#IfWinActive
 
-; WINDOWS KEY + H TOGGLES HIDDEN FILES 
-#IfWinActive ahk_class ExploreWClass
-#h::
-#IfWinActive ahk_class CabinetWClass
-#h:: 
-    Send !{V}{H}{H}
-return
-#IfWinActive
-
-
-; WINDOWS KEY + N TOGGLES Navigation
-#IfWinActive ahk_class ExploreWClass
-#n::
-#IfWinActive ahk_class CabinetWClass
-#n:: 
-    Send !{V}{N}{Enter}
-return
-#IfWinActive
+;;; --> using OneCommander
+;; WINDOWS KEY + N TOGGLES Navigation
+;#IfWinActive ahk_class ExploreWClass
+;#n::
+;#IfWinActive ahk_class CabinetWClass
+;#n:: 
+;    Send !{V}{N}{Enter}
+;return
+;#IfWinActive
 
 ; Paste in CMD
 #IfWinActive ahk_class ConsoleWindowClass
@@ -105,9 +106,11 @@ return
 return
 #IfWinActive
 
-; no longer needed
-; ; Pin Window to Top
-; ^SPACE:: Winset, AlwaysOnTop, , A
+
+;;; Start+Ctrl+T -- > always on top
+;; no longer needed
+;; ; Pin Window to Top
+;; ^SPACE:: Winset, AlwaysOnTop, , A
 
 ; **************************
 
@@ -125,7 +128,7 @@ return
 
 
 ; ******Media Controls******
-
+;; my new keyboard already has these.
 
 ; ;next song
 ; F9::	
