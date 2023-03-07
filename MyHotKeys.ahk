@@ -14,8 +14,18 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; & - An ampersand may be used between any two keys or mouse buttons to combine them into a custom hotkey.
 
 ;https://www.autohotkey.com/docs/commands/_InstallKeybdHook.htm
-; #InstallKeybdHook
-; #UseHook
+;#InstallKeybdHook
+
+
+;; in OneCommander Ctrl+R is rename
+If WinExist("ahk_EXE OneCommander.exe") 
+{
+    ^R::
+        send {F2}
+    return
+}
+
+
 
 ;;these are no longer needed
 ;#+F21::
@@ -61,6 +71,9 @@ LogiOverlay()
 	    ; WinSet, Transparent, 20, ahk_EXE LogiOverlay.exe ; uncomment this line to change its opacity instead
 	}
 }
+
+
+
 
 ; ***Windows/App Controls***
 
