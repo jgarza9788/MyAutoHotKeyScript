@@ -28,19 +28,39 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;    Send !{Space}
 ;return
 
-Run this script then use WINDOWS KEY + Y to toggle the taskbar
-#y::
-if toggle := !toggle
+
+;; no longer needed
+;Run this script then use WINDOWS KEY + Y to toggle the taskbar
+;#y::
+;if toggle := !toggle
+;{
+;    WinHide ahk_class Shell_TrayWnd
+;    WinHide Start ahk_class Button
+;}
+;else
+;{
+;    WinShow ahk_class Shell_TrayWnd
+;    WinShow Start ahk_class Button
+;}
+;return
+
+
+; ***disable logitech Overlay***
+
+; make Logitech craft windows transparent
+; ← everything after this character is a comment
+SetTimer, LogiOverlay, -0 
+;;; -->  -0 is in negative miliseconds 
+;;; --> -5000 ==  5seconds
+
+LogiOverlay()
 {
-    WinHide ahk_class Shell_TrayWnd
-    WinHide Start ahk_class Button
+    If WinExist("ahk_EXE LogiOverlay.exe") 
+    {
+	    WinClose, ahk_EXE LogiOverlay.exe ; close the window, comment to disable
+	    ; WinSet, Transparent, 20, ahk_EXE LogiOverlay.exe ; uncomment this line to change its opacity instead
+	}
 }
-else
-{
-    WinShow ahk_class Shell_TrayWnd
-    WinShow Start ahk_class Button
-}
-return
 
 ; ***Windows/App Controls***
 
@@ -65,7 +85,6 @@ return
 ; MButton::
 ;     Send #{Tab} ;show taskview
 ; return
-
 
 ;disbale LockKeys
 ;Set Lock keys permanently
