@@ -49,8 +49,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; make Logitech craft windows transparent
 ; ← everything after this character is a comment
-SetTimer, LogiOverlay, -0 
-;;; -->  -0 is in negative miliseconds 
+SetTimer, LogiOverlay, -5000 
+;;; -->  time is in negative miliseconds 
 ;;; --> -5000 ==  5seconds
 
 LogiOverlay()
