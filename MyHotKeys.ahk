@@ -77,6 +77,20 @@ LogiOverlay()
 
 ; ***Windows/App Controls***
 
+
+; display control 
+; alt + numpad1 == one display (clone)
+; alt + numpad2 == two display (extend)
+!Numpad1::  
+    run, %comspec% /c .\display_clone.cmd,,hide
+    return
+
+!Numpad2::  
+    run, %comspec% /c .\display_extend.cmd,,hide
+    return
+
+
+
 ; Quit an Program
 #Q::
     Send !{F4}
@@ -157,6 +171,7 @@ return
 :*:@#::  
     send 8182510647
     return
+
 
 
 ; ******Media Controls******
