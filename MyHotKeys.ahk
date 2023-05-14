@@ -55,6 +55,7 @@ If WinExist("ahk_EXE OneCommander.exe")
 ;return
 
 
+
 ; ***disable logitech Overlay***
 
 ; make Logitech craft windows transparent
@@ -68,7 +69,7 @@ LogiOverlay()
     If WinExist("ahk_EXE LogiOverlay.exe") 
     {
 	    WinClose, ahk_EXE LogiOverlay.exe ; close the window, comment to disable
-	    ; WinSet, Transparent, 20, ahk_EXE LogiOverlay.exe ; uncomment this line to change its opacity instead
+	    ;WinSet, Transparent, 20, ahk_EXE LogiOverlay.exe ; uncomment this line to change its opacity instead
 	}
 }
 
