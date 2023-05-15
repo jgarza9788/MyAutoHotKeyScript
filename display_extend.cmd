@@ -1,1 +1,1 @@
-displayswitch /extend
+.\displayswitch /extend

@@ -1,1 +1,1 @@
-displayswitch /clone
+.\displayswitch /clone
