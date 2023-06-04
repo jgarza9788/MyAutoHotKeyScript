@@ -13,8 +13,8 @@
 ; + - Shift
 ; & - An ampersand may be used between any two keys or mouse buttons to combine them into a custom hotkey.
 
-;https://www.autohotkey.com/docs/commands/_InstallKeybdHook.htm
-InstallKeybdHook "Install"
+;;https://www.autohotkey.com/docs/commands/_InstallKeybdHook.htm
+;InstallKeybdHook "Install"
 
 
 ;; in OneCommander Ctrl+R is rename
@@ -54,10 +54,10 @@ Capslock::+
 ; ******personal info******
 
 ;@@ => my gmail    
-:*:@@::  send "jgarza9788@gmail.com"
+:*:@@::jgarza9788@gmail.com
 
 ;@# => my number
-:*:@#::  send "8182510647"
+:*:@#::8182510647
 
 
 
