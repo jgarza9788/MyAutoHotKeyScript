@@ -1,1 +1,1 @@
-.\displayswitch /extend
+wt -p "pwsh" DisplaySwitch.exe /extend

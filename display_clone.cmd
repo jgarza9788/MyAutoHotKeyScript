@@ -1,1 +1,1 @@
-.\displayswitch /clone
+wt -p "pwsh" DisplaySwitch.exe /clone
