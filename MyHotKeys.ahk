@@ -23,6 +23,10 @@ If WinExist("ahk_EXE OneCommander.exe")
     ^R:: Send "{F2}"
 }
 
+;show and hide the taskbar using F6 and F7
+F6:: Run ".\WTB_hide.cmd"
+F7:: Run ".\WTB_show.cmd"
+
 ; ***Windows/App Controls***
 
 ; display control 
