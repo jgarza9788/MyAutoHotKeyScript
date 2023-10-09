@@ -17,6 +17,16 @@
 ;InstallKeybdHook "Install"
 
 
+;;; in explorer map space to Ctrl+Space
+;If WinExist("ahk_EXE explorer.exe")
+;{
+;    Space::Send "^{Space}"
+;}
+;else
+;{
+;    Space :: Send "{Space}"
+;}
+
 ;; in OneCommander Ctrl+R is rename
 If WinExist("ahk_EXE OneCommander.exe") 
 {
