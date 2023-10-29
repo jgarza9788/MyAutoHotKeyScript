@@ -54,13 +54,12 @@ F7:: Run ".\WTB_show.cmd"
 
 ;disbale LockKeys
 ;Set Lock keys permanently
-SetNumlockState "AlwaysOn"
+;SetNumlockState "AlwaysOn"
 SetCapsLockState "AlwaysOff"
 SetScrollLockState "AlwaysOff"
 
 ;Turn Caps Lock into a Shift key
 Capslock::+
-
 
 
 ; **************************
