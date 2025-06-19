@@ -28,10 +28,14 @@
 ;}
 
 ;; in OneCommander Ctrl+R is rename
-If WinExist("ahk_EXE OneCommander.exe") 
-{
-    ^R:: Send "{F2}"
-}
+;If WinExist("ahk_EXE OneCommander.exe") 
+;{
+;    ^R:: Send "{F2}"
+;}
+
+#IfWinActive ahk_exe OneCommander.exe
+^R::Send {F2}
+#IfWinActive
 
 ;show and hide the taskbar using F6 and F7
 F6:: Run ".\WTB_hide.cmd"
@@ -55,12 +59,15 @@ F7:: Run ".\WTB_show.cmd"
 ;disbale LockKeys
 ;Set Lock keys permanently
 ;SetNumlockState "AlwaysOn"
-SetCapsLockState "AlwaysOff"
-SetScrollLockState "AlwaysOff"
+SetCapsLockState, AlwaysOff
+SetScrollLockState, AlwaysOff
 
 ;Turn Caps Lock into a Shift key
 Capslock::+
 
+
+;; Everything!
+#s::Run, "C:\Program Files\Everything\Everything.exe"
 
 ; **************************
 
