@@ -37,18 +37,41 @@
 ^R::Send {F2}
 #IfWinActive
 
-;show and hide the taskbar using F6 and F7
-F6:: Run ".\WTB_hide.cmd"
-F7:: Run ".\WTB_show.cmd"
+;show and hide the taskbar 
+
+;old ones...
+;F6:: Run ".\WTB_hide.cmd"
+;F7:: Run ".\WTB_show.cmd"
+
+!PgUp::
+Run, % A_ScriptDir . "\WTB_show.cmd", , Hide
+return
+
+!PgDn::
+Run, % A_ScriptDir . "\WTB_hide.cmd", , Hide
+return
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; ***Windows/App Controls***
 
 ; display control 
 ; alt + numpad1 == one display (clone)
 ; alt + numpad2 == two display (extend)
-!Numpad1::  Run ".\display_clone.cmd"
-!Numpad2::  Run ".\display_extend.cmd"
-    
+
+;old ones...
+;!Numpad1::  Run ".\display_clone.cmd"
+;!Numpad2::  Run ".\display_extend.cmd"
+
+!Numpad1::   
+Run, % A_ScriptDir . "\display_clone.cmd", , Hide
+return
+
+!Numpad2::   
+Run, % A_ScriptDir . "\display_extend.cmd", , Hide
+return
+
+
 ; Quit an Program
 #Q:: Send "!{F4}"
 
